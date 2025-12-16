@@ -1,48 +1,48 @@
 // components/header/Header_05
 
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import Menu from "@/components/ui/navigation/Menu"
-import ContactButton from "@/components/ui/button/ContactButton"
-import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
-import HeaderContent from "../ui/frame/HeaderContent"
-import SnsIconButton from "@/components/ui/button/SnsIconButton"
-import { SnsButton } from "@/components/ui/button/SnsButton"
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import Menu from "@/components/ui/navigation/Menu";
+import ContactButton from "@/components/ui/button/ContactButton";
+import CompanyInfo from "@/components/ui/navigation/CompanyInfo";
+import HeaderContent from "../ui/frame/HeaderContent";
+import SnsIconButton from "@/components/ui/button/SnsIconButton";
+import { SnsButton } from "@/components/ui/button/SnsButton";
 
 const Header_05 = () => {
-  const { companyName } = CompanyInfo[0]
+  const { companyName } = CompanyInfo[0];
 
   // スクロール状態とメニュー開閉状態を管理
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false) // メニュー開閉状態
-  const [isAnimating, setIsAnimating] = useState(false) // フェードアニメーション用状態
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // メニュー開閉状態
+  const [isAnimating, setIsAnimating] = useState(false); // フェードアニメーション用状態
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMenuToggle = () => {
     if (isMenuOpen) {
-      setIsAnimating(true)
+      setIsAnimating(true);
       setTimeout(() => {
-        setIsMenuOpen(false)
-        setIsAnimating(false)
-      }, 200) // アニメーションの長さに合わせて調整
+        setIsMenuOpen(false);
+        setIsAnimating(false);
+      }, 200); // アニメーションの長さに合わせて調整
     } else {
-      setIsMenuOpen(true)
+      setIsMenuOpen(true);
     }
-  }
+  };
 
-  const filteredMenu = Menu.filter((item) => item.name !== "お問い合わせ")
+  const filteredMenu = Menu.filter((item) => item.name !== "お問い合わせ");
 
   return (
     <div className="">
@@ -53,21 +53,23 @@ const Header_05 = () => {
           }`}
         >
           {/* ロゴ */}
-          <Link href="/" className="w-[150px] md:w-[200px]">
-            <div className="text-lg font-bold ">
+          <Link href="/" className=" md:hidden w-[150px] md:w-[200px]">
+            {/* <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("primary")}
-            </div>
+            </div> */}
           </Link>
-
           {/* デスクトップ用メニュー */}
-          <ul className="hidden md:flex items-center space-x-10 ml-10 font-en tracking-[0.03em]">
+          <ul className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em]">
             {filteredMenu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
-                  <div>{item.name}</div>
+                  <div>{item.nameJa}</div>
                 </Link>
               </li>
             ))}
+          </ul>
+
+          <div className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em] justify-between">
             <div className="flex items-center ">
               {SnsButton.slice(0, 3).map((sns, index) => (
                 <SnsIconButton
@@ -79,10 +81,10 @@ const Header_05 = () => {
                 />
               ))}
             </div>
-            <li className="">
-              <ContactButton className="" />
-            </li>
-          </ul>
+            <div className="">
+              <ContactButton className="">ご予約はこちら</ContactButton>
+            </div>
+          </div>
 
           {/* ハンバーガーメニューボタン */}
           <button
@@ -136,7 +138,7 @@ const Header_05 = () => {
             {filteredMenu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
-                  <div onClick={handleMenuToggle}>{item.name}</div>
+                  <div onClick={handleMenuToggle}>{item.nameJa}</div>
                 </Link>
               </li>
             ))}
@@ -159,7 +161,7 @@ const Header_05 = () => {
         </div>
       </HeaderContent>
     </div>
-  )
-}
+  );
+};
 
-export default Header_05
+export default Header_05;
