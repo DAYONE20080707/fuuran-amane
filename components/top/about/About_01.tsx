@@ -14,10 +14,6 @@ const About_01 = () => {
   return (
     <>
       <SectionContent className="!pb-0 !px-0">
-        {/* widthがフルサイズでない場合は指定する */}
-        <section className="w-full md:max-w-[1240px] mx-auto px-5">
-         
-        </section>
         <AboutSection
           title="道しるべ"
           subtitle={`タロットカードにてオリジナルの手法で占い、

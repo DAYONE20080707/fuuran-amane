@@ -18,6 +18,19 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
   const [contents, setContents] = useState<Cms[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // 日付をフォーマットする関数
+  const formatDate = (dateString: string) => {
+    try {
+      const date = new Date(dateString);
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}.${month}.${day}`;
+    } catch (error) {
+      return dateString;
+    }
+  };
+
   useEffect(() => {
     // 旧データフェッチ処理
     /*
@@ -65,34 +78,38 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
 
   return (
     <div id="news" className="border-b border-accentColor">
-      <SectionContent className="bg-bgLight">
-        <section className="md:max-w-[1200px] mx-auto">
-          <ContentHeadline subTitle="News" mainTitle="お知らせ" />
-          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
-            {contents.map((post) => (
-              <div key={post.id} className="w-full">
-                <div className="w-full h-[250px] mt-5 md:mt-0">
-                  {post.image && (
-                    <Image
-                      src={post.image.url}
-                      alt="制作物サムネイル"
-                      width={370}
-                      height={223}
-                      className="w-full h-full rounded-2xl object-cover"
-                    />
+      <SectionContent className="max-w-[1240px] mx-auto bg-bgLight">
+        <section className="md:flex gap-[120px]">
+          <div className="md:max-w-[206px] ">
+            <ContentHeadline
+              subTitle="お知らせ"
+              mainTitle={
+                <>
+                  What's <br />
+                  New
+                </>
+              }
+            />
+          </div>
+
+          <div className="w-full mt-10 md:mt-0">
+            {contents.map((post, index) => (
+              <div key={post.id} className="border-b border-borderGray py-6">
+                <div className="md:flex gap-4">
+                  {post.date && (
+                    <p className="text-base md:text-lg tracking-[0.03em] w-[93px]">
+                      {formatDate(post.date)}
+                    </p>
                   )}
-                </div>
-                <div className="bg-white p-6">
-                  <p className="text-lg font-bold">{post.title}</p>
-                  <p className="mt-2 text-[#5f5f5f] text-xs">
-                    {post.description}
-                  </p>
+                  <div
+                    className="text-base md:text-lg tracking-[0.03em] leading-[180%]"
+                    dangerouslySetInnerHTML={{
+                      __html: post.content || post.description || "",
+                    }}
+                  />
                 </div>
               </div>
             ))}
-          </div>
-          <div className="flex justify-center mt-16">
-            <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
       </SectionContent>
