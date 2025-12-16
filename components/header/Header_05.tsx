@@ -45,122 +45,120 @@ const Header_05 = () => {
   const filteredMenu = Menu.filter((item) => item.name !== "お問い合わせ");
 
   return (
-    <div className="">
-      <HeaderContent className="max-w-[1200px] fixed top-5 left-1/2 transform -translate-x-1/2 z-10 w-full transition-all duration-300 rounded-[10px]">
-        <div
-          className={`w-full h-full flex items-center justify-between mx-auto p-3 md:py-4 md:px-10 rounded-full transition-all duration-300 ${
-            isScrolled ? "bg-white bg-opacity-80" : "bg-transparent"
-          }`}
-        >
-          {/* ロゴ */}
-          <Link href="/" className=" md:hidden w-[150px] md:w-[200px]">
-            {/* <div className="text-lg font-bold ">
+    <HeaderContent
+      className={`transition-all duration-300 ${
+        isScrolled ? "bg-bgLight" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-[1200px] w-full h-full flex items-center justify-between mx-auto p-3 md:py-4 md:px-10 transition-all duration-300">
+        {/* ロゴ */}
+        <Link href="/" className=" md:hidden w-[150px] md:w-[200px]">
+          {/* <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("primary")}
             </div> */}
-          </Link>
-          {/* デスクトップ用メニュー */}
-          <ul className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em]">
-            {filteredMenu.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href}>
-                  <div>{item.nameJa}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em] justify-between">
-            <div className="flex items-center ">
-              {SnsButton.slice(0, 3).map((sns, index) => (
-                <SnsIconButton
-                  key={index}
-                  href={sns.href}
-                  src={sns.src}
-                  alt={sns.name}
-                  className="text-white hover:text-accentColor transition-colors duration-200"
-                />
-              ))}
-            </div>
-            <div className="">
-              <ContactButton className="">ご予約はこちら</ContactButton>
-            </div>
-          </div>
-
-          {/* ハンバーガーメニューボタン */}
-          <button
-            className={`block md:hidden text-white transition-transform duration-300 ${
-              isMenuOpen ? "rotate-90" : "rotate-0"
-            }`}
-            onClick={handleMenuToggle}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* スマホ用メニュー */}
-        <div
-          className={`absolute top-20 left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          } ${isAnimating ? "pointer-events-auto" : ""}`}
-        >
-          <ul className="flex flex-col items-center space-y-6 py-10">
-            {filteredMenu.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href}>
-                  <div onClick={handleMenuToggle}>{item.nameJa}</div>
-                </Link>
-              </li>
-            ))}
-            <div className="flex items-center ">
-              {SnsButton.slice(0, 3).map((sns, index) => (
-                <SnsIconButton
-                  key={index}
-                  href={sns.href}
-                  src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
-                  alt={sns.name}
-                  className="text-white hover:text-accentColor transition-colors duration-200"
-                />
-              ))}
-            </div>
-            {/* ContactButton */}
-            <li>
-              <ContactButton className="w-full py-4 font-normal" />
+        </Link>
+        {/* デスクトップ用メニュー */}
+        <ul className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em]">
+          {filteredMenu.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href}>
+                <div>{item.nameJa}</div>
+              </Link>
             </li>
-          </ul>
+          ))}
+        </ul>
+
+        <div className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em] justify-between">
+          <div className="flex items-center ">
+            {SnsButton.slice(0, 3).map((sns, index) => (
+              <SnsIconButton
+                key={index}
+                href={sns.href}
+                src={sns.src}
+                alt={sns.name}
+                className="text-white hover:text-accentColor transition-colors duration-200"
+              />
+            ))}
+          </div>
+          <div className="">
+            <ContactButton className="">ご予約はこちら</ContactButton>
+          </div>
         </div>
-      </HeaderContent>
-    </div>
+
+        {/* ハンバーガーメニューボタン */}
+        <button
+          className={`block md:hidden text-white transition-transform duration-300 ${
+            isMenuOpen ? "rotate-90" : "rotate-0"
+          }`}
+          onClick={handleMenuToggle}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* スマホ用メニュー */}
+      <div
+        className={`absolute top-20 left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        } ${isAnimating ? "pointer-events-auto" : ""}`}
+      >
+        <ul className="flex flex-col items-center space-y-6 py-10">
+          {filteredMenu.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href}>
+                <div onClick={handleMenuToggle}>{item.nameJa}</div>
+              </Link>
+            </li>
+          ))}
+          <div className="flex items-center ">
+            {SnsButton.slice(0, 3).map((sns, index) => (
+              <SnsIconButton
+                key={index}
+                href={sns.href}
+                src={sns.name === "Line" ? sns.src : sns.src_w || sns.src}
+                alt={sns.name}
+                className="text-white hover:text-accentColor transition-colors duration-200"
+              />
+            ))}
+          </div>
+          {/* ContactButton */}
+          <li>
+            <ContactButton className="w-full py-4 font-normal" />
+          </li>
+        </ul>
+      </div>
+    </HeaderContent>
   );
 };
 
