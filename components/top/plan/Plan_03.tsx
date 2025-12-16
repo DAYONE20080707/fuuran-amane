@@ -12,7 +12,7 @@ import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Plan_03 = () => {
   return (
-    <>
+    <div id="price" className="border-b border-accentColor">
       <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
@@ -34,7 +34,7 @@ const Plan_03 = () => {
         </section>
         <PlanOption />
       </SectionContent>
-    </>
+    </div>
   )
 }
 

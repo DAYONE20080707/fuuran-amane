@@ -20,7 +20,7 @@ const KeyVisual_04 = () => {
         {/* widthがフルサイズでない場合は指定する */}
         <section className="mx-auto max-w-[1700px]">
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-[980px]" />
+          <KeyVisualContent className="h-[937px]" />
         </section>
         <TopPageHeadline
           subtitleTop={<>占い タロット</>}

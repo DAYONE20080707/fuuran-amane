@@ -10,7 +10,7 @@ import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Profile_03 = () => {
   return (
-    <>
+    <div id="access" className="border-b border-accentColor">
       <SectionContent className="">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
@@ -64,7 +64,7 @@ const Profile_03 = () => {
           </div>
         </section>
       </SectionContent>
-    </>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ import Image from "next/image"
 // メッセージ
 const Message_01 = () => {
   return (
-    <>
+    <div id="resavation" className="border-b border-accentColor">
       <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
@@ -38,7 +38,7 @@ const Message_01 = () => {
           />
         </section>
       </SectionContent>
-    </>
+    </div>
   )
 }
 
