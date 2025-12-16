@@ -1,37 +1,31 @@
 // components/message/About_01.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import PageContent from "@/components/ui/frame/PageContent"
-import Image from "next/image"
-import AboutSection from "@/components/ui/module/AboutSection_01"
-import SectionContent from "@/components/ui/frame/SectionContent"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import PageContent from "@/components/ui/frame/PageContent";
+import Image from "next/image";
+import AboutSection from "@/components/ui/module/AboutSection_01";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 // メッセージ
 const About_01 = () => {
   return (
     <>
-      <SectionContent id="about" className="!pb-0 !px-0">
+      <SectionContent className="!pb-0 !px-0">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="w-full md:max-w-[1240px] mx-auto px-5">
-          <ContentHeadline
-            subTitle="Who we are"
-            mainTitle="私たちについて"
-            subTitleClassName=""
-            titleClassName=""
-          />
+         
         </section>
         <AboutSection
-          title="見出しテキスト\n
-はいります見出し"
-          description={`メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-メッセージはいります。メッセージはいります。
-メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-メッセージはいります。メッセージはいります。`}
-          buttonHref="/about"
+          title="道しるべ"
+          subtitle={`タロットカードにてオリジナルの手法で占い、
+                      メッセージをお伝えします。`}
+          description={`苦難が断ち切れる強さを 持たせます。
+            心が清々しく温かい気持ちに 変わります。
+            新たな気付きや選択肢を 見出します。`}
+          // buttonHref="/about"
           // 以下は任意
           // imageUrl="/path/to/image.jpg"
           // position="代表取締役"
@@ -39,7 +33,7 @@ const About_01 = () => {
         />
       </SectionContent>
     </>
-  )
-}
+  );
+};
 
-export default About_01
+export default About_01;
