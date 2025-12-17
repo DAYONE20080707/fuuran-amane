@@ -78,8 +78,8 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
 
   return (
     <div id="news" className="border-b border-accentColor">
-      <SectionContent className="max-w-[1240px] mx-auto bg-bgLight">
-        <section className="md:flex gap-[120px]">
+      <SectionContent className=" bg-bgLight">
+        <section className="md:flex gap-[120px] max-w-[1240px] mx-auto">
           <div className="md:max-w-[206px] ">
             <ContentHeadline
               subTitle="お知らせ"

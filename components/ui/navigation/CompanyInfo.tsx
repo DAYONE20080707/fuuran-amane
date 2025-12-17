@@ -17,9 +17,9 @@ export const CompanyInfo = [
         className="w-full h-full object-contain"
       />
     ),
-    companyNameText: "企業名企業名企業名企業名企業名",
-    companyPostalCode: "000-000",
-    companyAddress: "○○県○○市○○町00-00○○○○○ビル00F",
+    companyNameText: "占い　タロット　風蘭女音",
+    companyPostalCode: "〒164-0003",
+    companyAddress: " 東京都中野区東中野1-51-1\n村上ビル302号室",
     companyTel: "000-000-0000",
     companyTelHref: "tel:0000000000",
     companyEmail: "info@company.co.jp",
