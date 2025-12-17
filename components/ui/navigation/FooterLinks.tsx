@@ -2,11 +2,11 @@
 export const FooterLinks = [
   {
     name: '利用規約',
-    href: '/',
+    href: '/pdf/fuuranamane-line-terms.pdf',
   },
   {
     name: 'キャンセルポリシー',
-    href: '/',
+    href: '/pdf/fuuranamane-policy.pdf',
   },
 
 
