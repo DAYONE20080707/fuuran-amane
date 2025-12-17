@@ -10,11 +10,11 @@ import Image from "next/image"
 // メッセージ
 const Message_01 = () => {
   return (
-    <div id="resavation" className="border-b border-accentColor">
+    <div id="reservation" className="border-b border-accentColor">
       <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
-          <ContentHeadline subTitle="鑑定予約" mainTitle="Resavation" />
+          <ContentHeadline subTitle="鑑定予約" mainTitle="Reservation" />
           <iframe
 
             width="100%"

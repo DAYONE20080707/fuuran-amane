@@ -20,11 +20,7 @@ export const Menu = [
     nameJa: 'アクセス',
     href: '/#access',
   },
-  {
-    name: 'contact',
-    nameJa: 'お問い合わせ',
-    href: '/#contact',
-  },
+ 
   // {
   //   name: 'Case study',
   //   href: '/#casestudy',
