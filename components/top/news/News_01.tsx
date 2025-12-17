@@ -85,7 +85,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
               subTitle="お知らせ"
               mainTitle={
                 <>
-                  What's <br />
+                  What&apos;s <br />
                   New
                 </>
               }
