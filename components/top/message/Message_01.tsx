@@ -1,11 +1,11 @@
 // components/message/Message_01.tsx
 
-"use client"
+"use client";
 
-import MoreLinkButton from "@/components/ui/button/MoreButton"
-import ContentHeadline from "@/components/ui/frame/ContentHeadline"
-import SectionContent from "@/components/ui/frame/SectionContent"
-import Image from "next/image"
+import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline";
+import SectionContent from "@/components/ui/frame/SectionContent";
+import Image from "next/image";
 
 // メッセージ
 const Message_01 = () => {
@@ -14,32 +14,21 @@ const Message_01 = () => {
       <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
-          <ContentHeadline subTitle="Who we are" mainTitle="私たちについて" />
-          <div className=" flex justify-start mt-16">
-            <h3 className=" w-[500px] text-5xl ">見出しテキスト</h3>
-            <div>
-              <p className=" w-[660px]">
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。メッセージはいります。
-                メッセージはいります。メッセージはいります。
-              </p>
-              <MoreLinkButton href="/" />
-            </div>
+          <ContentHeadline subTitle="鑑定予約" mainTitle="Resavation" />
+          <div className="mt-10">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=Asia%2FTokyo"
+              width="100%"
+              height="600"
+              style={{ border: "0" }}
+              scrolling="no"
+              className="w-full h-[400px] md:h-[600px]"
+            />
           </div>
-        </section>
-        <section className="w-[95%] h-[380px] mx-auto mt-24  flex justify-center relative">
-          <Image
-            src="/top/message/message_img.png"
-            alt="message"
-            fill
-            className="object-cover"
-          />
         </section>
       </SectionContent>
     </div>
-  )
-}
+  );
+};
 
-export default Message_01
+export default Message_01;
