@@ -22,12 +22,32 @@ const ebGaramond = EB_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | チョイスWeb制作",
-    default: "チョイスのWeb制作は",
+    template: "%s | 占い　タロット　風蘭女音",
+    default: "占い　タロット　風蘭女音",
   },
-  description: "チョイスは、",
+  description:
+    "占い　タロット　風蘭女音は、タロットカードによる鑑定サービスを提供しています。対面鑑定・オンライン鑑定・出張鑑定に対応。あなたの悩みをカードに問いかけ、幸せへと導けるようお手伝いします。",
+  keywords: [
+    "占い",
+    "タロット",
+    "風蘭女音",
+    "タロット占い",
+    "鑑定",
+    "対面鑑定",
+    "オンライン占い",
+    "出張鑑定",
+    "東中野",
+    "中野区",
+  ],
   icons: {
     icon: "/common/favicon.png",
+  },
+  openGraph: {
+    title: "占い　タロット　風蘭女音",
+    description:
+      "タロットカードによる鑑定サービス。対面鑑定・オンライン鑑定・出張鑑定に対応。あなたの悩みをカードに問いかけ、幸せへと導けるようお手伝いします。",
+    type: "website",
+    locale: "ja_JP",
   },
 };
 
