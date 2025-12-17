@@ -2,13 +2,13 @@
 export const SnsButton = [
   {
     name: 'facebook',
-    href: '/',
+    href: 'https://www.facebook.com/share/1CBWDzQBo7/?mibextid=wwXIfr',
     src: '/sns/facebook.svg',
     src_w: '/sns/facebook_w.svg',
   },
   {
     name: 'Instagram',
-    href: '/',
+    href: 'https://www.instagram.com/amane_furan?igsh=MXVycmh6aHVuY2p0NA%3D%3D&utm_source=qr',
     src: '/sns/instagram.svg',
     src_w: '/sns/instagram_w.svg',
   },
