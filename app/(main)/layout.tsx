@@ -1,5 +1,4 @@
 import Footer_01 from "@/components/footer/Footer_01"
-import Footer_02 from "@/components/footer/Footer_02"
 import Header_05 from "@/components/header/Header_05"
 
 interface MainLayoutProps {

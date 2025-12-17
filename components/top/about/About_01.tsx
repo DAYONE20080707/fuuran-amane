@@ -13,7 +13,7 @@ import SectionContent from "@/components/ui/frame/SectionContent";
 const About_01 = () => {
   return (
     <>
-      <SectionContent className="!pb-0 !px-0">
+      <SectionContent className="pt-8 md:pt-[96px] !pb-0 !px-0">
         <AboutSection
           title="道しるべ"
           subtitle={`タロットカードにてオリジナルの手法で占い、
