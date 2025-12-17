@@ -9,7 +9,7 @@ interface ProfileCard_01Props {
 
 const ProfileCard_01 = ({ label, value }: ProfileCard_01Props) => {
   return (
-    <dl className="text-base md:text-lg grid md:grid-cols-[150px_auto] gap-x-2 md:border-b md:border-borderGray">
+    <dl className="text-base md:text-lg grid md:grid-cols-[150px_auto] gap-x-2 border-b border-borderGray">
       <dt className="flex items-baseline py-2 md:py-4 leading-[180%]">
         {label}
       </dt>

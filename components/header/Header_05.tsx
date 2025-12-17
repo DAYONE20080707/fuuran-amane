@@ -87,7 +87,7 @@ const Header_05 = () => {
 
         {/* ハンバーガーメニューボタン */}
         <button
-          className={`block md:hidden text-white transition-transform duration-300 ${
+          className={`block md:hidden text-baseColor transition-transform duration-300 ${
             isMenuOpen ? "rotate-90" : "rotate-0"
           }`}
           onClick={handleMenuToggle}
@@ -129,7 +129,7 @@ const Header_05 = () => {
 
       {/* スマホ用メニュー */}
       <div
-        className={`absolute top-20 left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
+        className={`absolute top-[56px] left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         } ${isAnimating ? "pointer-events-auto" : ""}`}
       >
@@ -154,7 +154,7 @@ const Header_05 = () => {
           </div>
           {/* ContactButton */}
           <li>
-            <ContactButton className="w-full py-4 font-normal" />
+            <ContactButton className="w-full py-4 font-normal" >ご予約はこちら</ContactButton>
           </li>
         </ul>
       </div>

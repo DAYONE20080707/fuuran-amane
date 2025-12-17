@@ -102,7 +102,7 @@ const News_01 = ({ limit = 3 }: NewsProps) => {
                     </p>
                   )}
                   <div
-                    className="text-base md:text-lg tracking-[0.03em] leading-[180%]"
+                    className="mt-6 md:mt-0 text-base md:text-lg tracking-[0.03em] leading-[180%]"
                     dangerouslySetInnerHTML={{
                       __html: post.content || post.description || "",
                     }}

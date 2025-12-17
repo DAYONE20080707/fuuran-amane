@@ -15,7 +15,7 @@ const Message_04 = () => {
       <SectionContent>
         {/* widthがフルサイズでない場合は指定する */}
         <section className=" md:max-w-[1200px] mx-auto ">
-          <div className=" flex justify-start gap-[120px]">
+          <div className=" md:flex justify-start gap-[120px]">
             <div className="w-[210px]">
               <ContentHeadline subTitle="占い師紹介" mainTitle="About" />
             </div>

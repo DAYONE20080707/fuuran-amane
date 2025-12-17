@@ -16,7 +16,7 @@ const PlanList_03 = () => {
               </span>
               <p>
                 <span className="text-sm md:text-lg tracking-[0.03em] leading-[180%]">¥</span>
-                <span className="font-en text-base md:text-[32px] tracking-[0.03em] leading-[180%]">
+                <span className="font-en text-2xl md:text-[32px] tracking-[0.03em] leading-[180%]">
                   {plan.price}
                 </span>
               </p>
@@ -24,7 +24,7 @@ const PlanList_03 = () => {
           </div>
         ))}
       </div>
-      <ul className="mt-6 text-[15px] gap-y-2 leading-[180%]">
+      <ul className="mt-6 text-xs md:text-[15px] gap-y-2 leading-[180%]">
         <li className="mb-2 flex">
           <span>※</span>
           <span>価格はすべて税込みです。</span>

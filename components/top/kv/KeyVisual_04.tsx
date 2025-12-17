@@ -16,11 +16,11 @@ const KeyVisual_04 = () => {
   };
   return (
     <>
-      <FirstViewContent className="mt-[74px] relative">
+      <FirstViewContent className="mt-6 md:mt-[74px] relative">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="mx-auto max-w-[1700px]">
           {/* KeyVisualContentに高さを指定 */}
-          <KeyVisualContent className="h-[937px]" />
+          <KeyVisualContent className="h-[80vh] md:h-[937px]" />
         </section>
         <TopPageHeadline
           subtitleTop={<>占い タロット</>}
