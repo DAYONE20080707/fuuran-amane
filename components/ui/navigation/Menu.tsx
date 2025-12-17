@@ -1,24 +1,30 @@
 //components/ui/navigation/Menu.tsx
 export const Menu = [
   {
-    name: "Our Service",
-    nameJa: "事業内容",
-    href: "/#service",
-  },
-  {
-    name: "About  us",
-    nameJa: "会社概要",
+    name: "About",
+    nameJa: "占い師紹介",
     href: "/#about",
   },
-
-  // {
-  //   name: '料金プラン',
-  //   href: '/#plan',
-  // },
-  // {
-  //   name: 'お問い合わせ',
-  //   href: '/contact',
-  // },
+  {
+    name: "News",
+    nameJa: "お知らせ",
+    href: "/#news",
+  },
+  {
+    name: 'Price',
+    nameJa: '鑑定料金',
+    href: '/#price',
+  },
+  {
+    name: 'access',
+    nameJa: 'アクセス',
+    href: '/#access',
+  },
+  {
+    name: 'contact',
+    nameJa: 'お問い合わせ',
+    href: '/#contact',
+  },
   // {
   //   name: 'Case study',
   //   href: '/#casestudy',

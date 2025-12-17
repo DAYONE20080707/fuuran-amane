@@ -1,22 +1,23 @@
 //components/ui/navigation/SnsButton.tsx
 export const SnsButton = [
   {
-    name: 'Instagram',
-    href: '/',
-    src: '/sns/instagram.svg',
-    src_w: '/sns/instagram_w.svg',
-  },
-  {
     name: 'facebook',
     href: '/',
     src: '/sns/facebook.svg',
     src_w: '/sns/facebook_w.svg',
   },
   {
-    name: 'Line',
+    name: 'Instagram',
     href: '/',
-    src: '/sns/line.svg',
+    src: '/sns/instagram.svg',
+    src_w: '/sns/instagram_w.svg',
   },
+
+  // {
+  //   name: 'Line',
+  //   href: '/',
+  //   src: '/sns/line.svg',
+  // },
   // {
   //   name: 'X',
   //   href: '/',
