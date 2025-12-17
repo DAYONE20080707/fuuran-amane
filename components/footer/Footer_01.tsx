@@ -62,7 +62,7 @@ const Footer_01 = () => {
           <ul className="md:flex items-center md:space-x-10 font-light mt-5 md:mt-0 space-y-5 md:space-y-0 text-accentColor">
             {FooterLinks.map((item, index) => (
               <li key={index}>
-                <Link href={item.href}>
+                <Link href={item.href} target="blank">
                   <div>{item.name}</div>
                 </Link>
               </li>
