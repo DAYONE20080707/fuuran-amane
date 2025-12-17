@@ -16,23 +16,13 @@ const Plan_03 = () => {
       <SectionContent className="bg-bgLight">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
-            subTitle="Plan"
-            mainTitle="料金プラン"
+            subTitle="鑑定料金"
+            mainTitle="Price"
             subTitleClassName=""
             titleClassName=""
           />
           <PlanList />
-
-          <div className="flex justify-center mt-10 md:mt-16">
-            <Link
-              href="/"
-              className="bg-accentColor text-white cursor-pointer rounded-full flex items-center justify-center w-[350px] h-12 md:h-[58px] font-semibold"
-            >
-              申し込む
-            </Link>
-          </div>
         </section>
-        <PlanOption />
       </SectionContent>
     </div>
   )
