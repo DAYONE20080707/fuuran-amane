@@ -50,15 +50,15 @@ const Header_05 = () => {
         isScrolled ? "bg-bgLight" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1200px] w-full h-full flex items-center justify-between mx-auto p-3 md:py-4 md:px-10 transition-all duration-300">
+      <div className="lg:max-w-[1200px] w-full h-full flex items-center justify-between mx-auto p-3 lg:py-4 lg:px-10 transition-all duration-300">
         {/* ロゴ */}
-        <Link href="/" className=" md:hidden w-[150px] md:w-[200px]">
+        <Link href="/" className=" lg:hidden w-[150px]">
           {/* <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("primary")}
             </div> */}
         </Link>
         {/* デスクトップ用メニュー */}
-        <ul className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em]">
+        <ul className="hidden lg:flex items-center space-x-10 ml-10 tracking-[0.03em]">
           {filteredMenu.map((item, index) => (
             <li key={index}>
               <Link href={item.href}>
@@ -68,7 +68,7 @@ const Header_05 = () => {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center space-x-10 ml-10 tracking-[0.03em] justify-between">
+        <div className="hidden lg:flex items-center space-x-10 tracking-[0.03em] justify-between">
           <div className="flex items-center ">
             {SnsButton.slice(0, 3).map((sns, index) => (
               <SnsIconButton
@@ -87,7 +87,7 @@ const Header_05 = () => {
 
         {/* ハンバーガーメニューボタン */}
         <button
-          className={`block md:hidden text-baseColor transition-transform duration-300 ${
+          className={`block lg:hidden text-baseColor transition-transform duration-300 ${
             isMenuOpen ? "rotate-90" : "rotate-0"
           }`}
           onClick={handleMenuToggle}
@@ -129,7 +129,7 @@ const Header_05 = () => {
 
       {/* スマホ用メニュー */}
       <div
-        className={`absolute top-[56px] left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
+        className={`absolute top-[56px] left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white lg:hidden transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         } ${isAnimating ? "pointer-events-auto" : ""}`}
       >
@@ -154,7 +154,9 @@ const Header_05 = () => {
           </div>
           {/* ContactButton */}
           <li>
-            <ContactButton className="w-full py-4 font-normal" >ご予約はこちら</ContactButton>
+            <ContactButton className="w-full py-4 font-normal">
+              ご予約はこちら
+            </ContactButton>
           </li>
         </ul>
       </div>
