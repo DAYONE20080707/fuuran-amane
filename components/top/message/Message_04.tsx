@@ -37,7 +37,7 @@ const Message_04 = () => {
               </p>
               <div className="mt-10 md:mt-16 p-4 md:p-4 border border-borderGray">
                 <p className="text-xs md:text-[15px] tracking-[0.03em] leading-[180%] mb-4">
-                  <Link href="/site" className="underline">
+                  <Link href="/pdf/fuuranamane-line-terms.pdf" className="underline">
                     利用規約
                   </Link>
                   に基づき下記の項目の鑑定は行っておりませんのでご注意ください。
